@@ -1,0 +1,17 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://d1csarkz8obe9u.cloudfront.net/posterpreviews/film-movie-maker-youtube-channel-art-banner-design-template-452b518153abfc71ca929b93e3fc267f_screen.jpg?ts=1588568089);">
+  <div class="container">
+  </div>
+</div>
+
+<div class="container">
+  <h1><%= @list.name %></h1>
+
+  <% @list.movies.each do |movie| %>
+    <div class="card-product my-5">
+      <img src="<%= movie.poster_url%>" />
+      <div class="card-product-infos">
+        <p><%= movie.overview %></p>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to "Add a movie", new_list_bookmark_path(@list), class: 'btn btn-ghost' %>

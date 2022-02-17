@@ -1,0 +1,15 @@
+<div class="container">
+<h1><%= @list.name %></h1>
+
+  <%= simple_form_for([@list, @bookmark]) do |f|  %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit class: 'btn btn-primary'%>
+  <% end %>
+  <hr>
+  <%= link_to lists_path do%>
+  <i class="fa fa-history"></i> Back to list
+  <% end %>
+
+
+</div>

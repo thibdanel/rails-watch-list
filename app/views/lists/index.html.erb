@@ -1,0 +1,17 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://d1csarkz8obe9u.cloudfront.net/posterpreviews/film-movie-maker-youtube-channel-art-banner-design-template-452b518153abfc71ca929b93e3fc267f_screen.jpg?ts=1588568089);">
+  <div class="container">
+    <h1>Make your own <strong>list</strong></h1>
+  </div>
+</div>
+
+<div class="container">
+      <% @lists.each do |list| %>
+          <div class="card-category mt-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://csbellevue.libreedu.ovh/wordpress/2019-1es-g13/files/2019/02/cin%C3%A9ma.jpg)">
+              <%= link_to list_path(list) do %>
+                <%=list.name %>
+              <% end %>
+          </div>
+      <%end %>
+    <%= link_to 'Create a list', new_list_path, class: 'btn btn-primary mt-5'%>
+
+</div>
