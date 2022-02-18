@@ -1,15 +1,16 @@
 <div class="container">
-<h1><%= @list.name %></h1>
-
-  <%= simple_form_for([@list, @bookmark]) do |f|  %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.submit class: 'btn btn-primary'%>
-  <% end %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://fr.web.img6.acsta.net/newsv7/21/12/22/20/01/2678549.jpg)">
+    Create a list
+  </div>
+  <h1><%= @list.name %></h1>
+    <%= simple_form_for([@list, @bookmark]) do |f|  %>
+      <%= f.input :comment %>
+      <%= f.association :movie %>
+      <%= f.association :list %>
+      <%= f.submit class: "btn btn-ghost"%>
+    <% end %>
   <hr>
-  <%= link_to lists_path do%>
-  <i class="fa fa-history"></i> Back to list
-  <% end %>
-
-
+    <%= link_to lists_path do%>
+    <i class="fa fa-history"></i> Back to list
+    <% end %>
 </div>

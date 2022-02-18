@@ -4,14 +4,30 @@
 </div>
 
 <div class="container">
-  <h1><%= @list.name %></h1>
+  <%= @list.name %></h1>
 
   <% @list.movies.each do |movie| %>
-    <div class="card-product my-5">
+    <div class="card-product my-4">
       <img src="<%= movie.poster_url%>" />
-      <div class="card-product-infos">
-        <p><%= movie.overview %></p>
-      </div>
+        <div class="card-product-infos">
+          <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+            <p><%= movie.overview %></p>
+            <p>My comment: <%= bookmark.comment %></p>
+            <p>Rating: <%= movie.rating %>/10</p>
+            <%=link_to bookmark_path(movie_id: movie.id),
+                method: :delete,
+                data: { confirm: "Are you sure?" } do%>
+                <i class="fas fa-trash"></i>
+            <% end %>
+        </div>
     </div>
   <% end %>
   <%= link_to "Add a movie", new_list_bookmark_path(@list), class: 'btn btn-ghost' %>
+  <%= link_to 'Delete list', list_path(@list),
+              method: :delete,
+              data: { confirm: "Are you sure?" }, class: 'btn btn-warning' %>
+    <hr>
+    <%= link_to lists_path do%>
+    <i class="fa fa-history"></i> Back to list
+    <% end %>
+  </div>
