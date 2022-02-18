@@ -1,10 +1,12 @@
 <div class="container">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img.freepik.com/vecteurs-libre/fond-film-cinema-pop-corn-pellicule-clins-billets-fond-temps-film_41737-248.jpg?size=626&ext=jpg)">
-    <h1>Create a list</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.leparisien.fr/resizer/_Qgf9Z9wEwKqJdaGeGBaggxPA1s=/1280x800/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/HAJOUE72SD4OBCQ7GZVVBZ3ZAQ.jpg);">
+  <div class="container">
+    <h1>Create your list</h1>
   </div>
+</div>
   <%= simple_form_for(@list) do |f|  %>
   <%= f.input :name %>
-  <%= f.submit class: 'btn btn-primary'%>
+  <%= f.submit class: 'btn btn-ghost'%>
   <% end %>
   <hr>
   <%= link_to lists_path do%>
