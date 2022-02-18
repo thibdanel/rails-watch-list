@@ -1,19 +1,18 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://d1csarkz8obe9u.cloudfront.net/posterpreviews/film-movie-maker-youtube-channel-art-banner-design-template-452b518153abfc71ca929b93e3fc267f_screen.jpg?ts=1588568089);">
+
+<div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/vecteurs-libre/fond-film-cinema-pop-corn-pellicule-clins-billets-fond-temps-film_41737-248.jpg?size=626&ext=jpg);">
   <div class="container">
     <h1>My wish list</h1>
   </div>
 </div>
-
-
-<div class="container">
   <div class="row">
     <% @lists.each do |list| %>
       <div class="col-6">
-        <div class="card-category mt-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.lepointdufle.net/ia/cinema1.jpg)">
-          <%= link_to list.name, list_path(list) %>
+        <div class="card-category mt-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcwanrn4fPjI9b4aI31c6PQkMWF_F3yzM9sA&usqp=CAU)">
+          <%= link_to list.name, list_path(list), :class => "link_to" %>
         </div>
       </div>
       <%end %>
   </div>
-  <%= link_to 'Create a list', new_list_path, class: 'btn btn-ghost mt-5'%>
+  <%= link_to 'Create a list', new_list_path, class: 'btn btn-ghost my-3'%>
 </div>

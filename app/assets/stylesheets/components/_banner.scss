@@ -1,7 +1,10 @@
 .banner {
   background-size: cover;
+  background-position: cover;
   background-position: center;
-  padding: 150px 0;
+  padding-top: 250px;
+  padding-bottom: 20px;
+  border-radius: 8px;
 }
 
 .banner h1 {
@@ -11,6 +14,7 @@
   font-size: 32px;
   font-weight: bold;
   text-align: center;
+  font-family: 'Architects Daughter', cursive;
 }
 
 .banner p {
