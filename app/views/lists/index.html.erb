@@ -1,14 +1,13 @@
-
-<div class="container">
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/vecteurs-libre/fond-film-cinema-pop-corn-pellicule-clins-billets-fond-temps-film_41737-248.jpg?size=626&ext=jpg);">
+<div class="container mt-3">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.leparisien.fr/resizer/_Qgf9Z9wEwKqJdaGeGBaggxPA1s=/1280x800/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/HAJOUE72SD4OBCQ7GZVVBZ3ZAQ.jpg);">
   <div class="container">
     <h1>My wish list</h1>
   </div>
 </div>
   <div class="row">
     <% @lists.each do |list| %>
-      <div class="col-6">
-        <div class="card-category mt-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcwanrn4fPjI9b4aI31c6PQkMWF_F3yzM9sA&usqp=CAU)">
+      <div class="col-3">
+        <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcwanrn4fPjI9b4aI31c6PQkMWF_F3yzM9sA&usqp=CAU)">
           <%= link_to list.name, list_path(list), :class => "link_to" %>
         </div>
       </div>
