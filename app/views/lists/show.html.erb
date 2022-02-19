@@ -20,12 +20,12 @@
         </div>
     </div>
   <% end %>
-  <%= link_to "Add a movie", new_list_bookmark_path(@list), class: 'btn btn-ghost mt-3' %>
-  <%= link_to 'Delete list', list_path(@list),
+    <%= link_to "Add a movie", new_list_bookmark_path(@list), class: 'btn btn-ghost mt-3' %>
+    <%= link_to 'Delete list', list_path(@list),
               method: :delete,
-              data: { confirm: "Are you sure?" }, class: 'alert' %>
+              data: { confirm: "Are you sure?" }, class: 'btn btn-danger mt-3' %>
     <hr>
-    <%= link_to lists_path do%>
-    <i class="fa fa-history mb-3"></i> Back to list
-    <% end %>
+      <%= link_to lists_path do%>
+        <i class="fa fa-history mb-3"></i> Back to list
+      <% end %>
   </div>
